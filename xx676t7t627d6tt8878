@@ -227,10 +227,11 @@ StarterGui:SetCore("SendNotification", {
     Duration = 10
 })
 
-print("DONT HOLD THE GUN WHEN CHANGING SETTINGS")
+print("ITS RECOMMENDED NOT TO HOLD THE GUN OUT WHEN PRESSING CTRL + K.")
 print("Ctrl + K To start")
 print("Ctrl + N - Normal bullets")
 print("Ctrl + M - Explosive bullets")
 print("Ctrl + G - Semi firemode")
 print("Ctrl + H - Auto firemode")
-print("V 0.0.2")
+print("V 0.0.1")
+print("breakify jumpscare 😲")
