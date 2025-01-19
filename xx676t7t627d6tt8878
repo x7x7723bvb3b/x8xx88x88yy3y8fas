@@ -32,6 +32,7 @@ local function modifyToolSettings()
                         settings.BurstShot = 3
                         settings.GunType = 1
                         settings.ReloadType = 1
+                        settings.Mode = "Semi"
                         settings.AutoChamber = false
                         settings.ChamberWhileAim = false
                         settings.VRecoil = {0.0000001, 0.0000001}
@@ -171,4 +172,9 @@ StarterGui:SetCore("SendNotification", {
     Duration = 10
 })
 
-print("Loaded , DONT HOLD THE GUN WHEN APPLYING OR CHANGING ANYTHING ctrl + k to apply settings, - ctrl + n normal bullet - ctrl + m explosive bullet to make it explode walk further from the target, - ctrl + G semi firemode - ctrl + H Auto firemode")
+print("DONT HOLD THE GUN WHEN CHANGING SETTINGS")
+print("Ctrl + K To start")
+print("Ctrl + N - Eormal bullets")
+print("Ctrl + M - Explosive bullets")
+print("Ctrl + G - Semi firemode")
+print("Ctrl + H - Auto firemode")
