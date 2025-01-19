@@ -32,7 +32,6 @@ local function modifyToolSettings()
                         settings.BurstShot = 3
                         settings.GunType = 1
                         settings.ReloadType = 1
-                        settings.Mode = "Auto"
                         settings.AutoChamber = false
                         settings.ChamberWhileAim = false
                         settings.VRecoil = {0.0000001, 0.0000001}
