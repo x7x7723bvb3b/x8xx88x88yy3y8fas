@@ -1,6 +1,6 @@
 local UserInputService = game:GetService("UserInputService")
+local StarterGui = game:GetService("StarterGui")
 local player = game:GetService("Players").LocalPlayer
-
 
 local originalBulletTypes = {}
 
@@ -17,7 +17,6 @@ local function modifyToolSettings()
                     if settingsModule then
                         local settings = require(settingsModule)
 
-                        
                         if not originalBulletTypes[tool.Name] then
                             originalBulletTypes[tool.Name] = settings.BulletType
                         end
@@ -159,7 +158,18 @@ UserInputService.InputBegan:Connect(function(input, gameProcessed)
         changeBulletType("original")
     elseif input.KeyCode == Enum.KeyCode.M and UserInputService:IsKeyDown(Enum.KeyCode.LeftControl) then
         changeBulletType("M381")
+    elseif input.KeyCode == Enum.KeyCode.Semicolon and UserInputService:IsKeyDown(Enum.KeyCode.LeftControl) then
+        changeBulletType("Semi")
+    elseif input.KeyCode == Enum.KeyCode.Quote and UserInputService:IsKeyDown(Enum.KeyCode.LeftControl) then
+        changeBulletType("Auto")
     end
 end)
 
-print("Loaded , ctrl actually just get a grip on your dick")
+
+StarterGui:SetCore("SendNotification", {
+    Title = "jesus is the lord",
+    Text = "Script loaded, check console (F9).",
+    Duration = 5
+})
+
+print("Loaded , DONT HOLD THE GUN WHEN APPLYING OR CHANGING ANYTHING ctrl + k to apply settings, - ctrl + n normal bullet - ctrl + m explosive bullet to make it explode walk further from the target, - ctrl + Semicolon semi firemode - ctrl + Quote Auto firemode")
