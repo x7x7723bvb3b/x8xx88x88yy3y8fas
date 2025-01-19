@@ -149,6 +149,26 @@ local function changeBulletType(newType)
     end
 end
 
+local function changeMode(mode)
+    local backpack = player:FindFirstChild("Backpack")
+
+    if backpack then
+        for _, tool in ipairs(backpack:GetChildren()) do
+            if tool:FindFirstChild("ACS_Module") then
+                local variables = tool.ACS_Module:FindFirstChild("Variables")
+
+                if variables then
+                    local settingsModule = variables:FindFirstChild("Settings")
+                    if settingsModule then
+                        local settings = require(settingsModule)
+                        settings.Mode = mode
+                    end
+                end
+            end
+        end
+    end
+end
+
 UserInputService.InputBegan:Connect(function(input, gameProcessed)
     if gameProcessed then return end
 
@@ -165,16 +185,15 @@ UserInputService.InputBegan:Connect(function(input, gameProcessed)
     end
 end)
 
-
 StarterGui:SetCore("SendNotification", {
     Title = "jesus is the lord",
-    Text = "Script loaded, Press f9 for more info.",
+    Text = "Script loaded, Press F9 for more info.",
     Duration = 10
 })
 
 print("DONT HOLD THE GUN WHEN CHANGING SETTINGS")
 print("Ctrl + K To start")
-print("Ctrl + N - Eormal bullets")
+print("Ctrl + N - Normal bullets")
 print("Ctrl + M - Explosive bullets")
 print("Ctrl + G - Semi firemode")
 print("Ctrl + H - Auto firemode")
