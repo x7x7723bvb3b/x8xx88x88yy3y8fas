@@ -158,18 +158,18 @@ UserInputService.InputBegan:Connect(function(input, gameProcessed)
         changeBulletType("original")
     elseif input.KeyCode == Enum.KeyCode.M and UserInputService:IsKeyDown(Enum.KeyCode.LeftControl) then
         changeBulletType("M381")
-    elseif input.KeyCode == Enum.KeyCode.Semicolon and UserInputService:IsKeyDown(Enum.KeyCode.LeftControl) then
-        changeBulletType("Semi")
-    elseif input.KeyCode == Enum.KeyCode.Quote and UserInputService:IsKeyDown(Enum.KeyCode.LeftControl) then
-        changeBulletType("Auto")
+    elseif input.KeyCode == Enum.KeyCode.G and UserInputService:IsKeyDown(Enum.KeyCode.LeftControl) then
+        changeMode("Semi")
+    elseif input.KeyCode == Enum.KeyCode.H and UserInputService:IsKeyDown(Enum.KeyCode.LeftControl) then
+        changeMode("Auto")
     end
 end)
 
 
 StarterGui:SetCore("SendNotification", {
     Title = "jesus is the lord",
-    Text = "Script loaded, check console (F9).",
-    Duration = 5
+    Text = "Script loaded, Press f9 for more info.",
+    Duration = 10
 })
 
-print("Loaded , DONT HOLD THE GUN WHEN APPLYING OR CHANGING ANYTHING ctrl + k to apply settings, - ctrl + n normal bullet - ctrl + m explosive bullet to make it explode walk further from the target, - ctrl + Semicolon semi firemode - ctrl + Quote Auto firemode")
+print("Loaded , DONT HOLD THE GUN WHEN APPLYING OR CHANGING ANYTHING ctrl + k to apply settings, - ctrl + n normal bullet - ctrl + m explosive bullet to make it explode walk further from the target, - ctrl + G semi firemode - ctrl + H Auto firemode")
